@@ -20,12 +20,15 @@ public class Converter {
 		}
 		System.out.println(numberOfZeros);
 
+		Long wiegandEnd = Long.parseLong(abatrackLast4, 16);
+		if (wiegandEnd.toString().length() < 5 && numberOfZeros == 0) {
+			numberOfZeros += 5 - wiegandEnd.toString().length();
+		}
 		Long wiegandBegin = Long.parseLong(abatrackRest, 16);
 		String wiegandEndZeros = "";
 		for (int i = 0; i < numberOfZeros; i++) {
 			wiegandEndZeros += "0";
 		}
-		Long wiegandEnd = Long.parseLong(abatrackLast4, 16);
 
 		String wiegandString = wiegandBegin.toString() + wiegandEndZeros + wiegandEnd.toString();
 
