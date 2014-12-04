@@ -18,9 +18,9 @@ public class Test {
 			if (!WiegandConverter.convert(key).equals(chaves.get(key))) {
 				System.out.println("Erro na chave: " + key);
 				passou = false;
-			} 
+			}
 		}
-		if(passou)
+		if (passou)
 			System.out.println("Passou no teste");
 		else
 			System.out.println("Nao passou no teste");
@@ -40,5 +40,7 @@ public class Test {
 		chaves.put(7090990L, 10813102L);
 		chaves.put(2268198L, 3439974L);
 		chaves.put(25100471L, 12700183L);
+		chaves.put(25100471L, 12700183L);
+		chaves.put(436414L, 643198L);
 	}
 }

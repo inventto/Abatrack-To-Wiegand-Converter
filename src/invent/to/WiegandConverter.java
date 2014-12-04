@@ -4,7 +4,9 @@ public class WiegandConverter {
 
 	public static Long convert(Long key) {
 		String abatrackHexa = Long.toHexString(key);
-
+		if (abatrackHexa.length() == 5) {
+			abatrackHexa = "0" + abatrackHexa;
+		}
 		int abaLength = abatrackHexa.length();
 		String abatrackLast4 = abatrackHexa.substring(abaLength - 4);
 		String abatrackRest = abatrackHexa.substring(abaLength - 6, abaLength - 4);
